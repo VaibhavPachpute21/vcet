@@ -1,8 +1,18 @@
-import nmap
+# import whois
+
+# w=whois.whois('vcet.edu.in')
 
 
-scanner = nmap.PortScanner()
-res=scanner.scan(hosts='vcet.edu.in',arguments="--script=dns-brute");
+# print(w)
+# print(f"""
+# 	registerar:{w['registrar']}
+# 	{w['creation_date']}
+# 	{w['expiration_date']}
+# 	{w['name_servers']}
+# 	{w['country']}
+# 	{w['emails']}
+# 	""")
 
-print(res)
-
+with open('output.txt') as f:
+    for line in f:
+        print("\t",line)

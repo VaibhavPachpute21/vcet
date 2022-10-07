@@ -1,0 +1,107 @@
+# Nmap 7.91 scan initiated Sat Oct  8 00:52:24 2022 as: nmap -oX - -f --script=dns-brute -oN ./output/nmap.txt 103.102.234.44
+Nmap scan report for divine.herosite.pro (103.102.234.44)
+Host is up (0.0059s latency).
+Not shown: 909 filtered ports
+PORT      STATE  SERVICE
+20/tcp    closed ftp-data
+21/tcp    open   ftp
+22/tcp    closed ssh
+25/tcp    open   smtp
+53/tcp    open   domain
+80/tcp    open   http
+110/tcp   open   pop3
+143/tcp   open   imap
+443/tcp   open   https
+465/tcp   open   smtps
+587/tcp   open   submission
+993/tcp   open   imaps
+995/tcp   open   pop3s
+1025/tcp  open   NFS-or-IIS
+1026/tcp  open   LSA-or-nterm
+1028/tcp  open   unknown
+1048/tcp  open   neod2
+1054/tcp  open   brvread
+1072/tcp  open   cardax
+1078/tcp  open   avocent-proxy
+1084/tcp  open   ansoft-lm-2
+1085/tcp  open   webobjects
+1086/tcp  open   cplscrambler-lg
+1089/tcp  open   ff-annunc
+1106/tcp  open   isoipsigport-1
+1111/tcp  open   lmsocialserver
+1119/tcp  open   bnetgame
+1147/tcp  open   capioverlan
+1183/tcp  open   llsurfup-http
+1600/tcp  open   issd
+1666/tcp  open   netview-aix-6
+1720/tcp  open   h323q931
+1840/tcp  open   netopia-vo2
+1972/tcp  open   intersys-cache
+1974/tcp  open   drp
+2000/tcp  open   cisco-sccp
+2003/tcp  open   finger
+2008/tcp  open   conf
+2021/tcp  open   servexec
+2043/tcp  open   isis-bcast
+2222/tcp  open   EtherNetIP-1
+2251/tcp  open   dif-port
+2366/tcp  open   qip-login
+2604/tcp  open   ospfd
+2702/tcp  open   sms-xfer
+2809/tcp  open   corbaloc
+2920/tcp  open   roboeda
+3003/tcp  open   cgms
+3168/tcp  open   poweronnud
+3211/tcp  open   avsecuremgmt
+3306/tcp  open   mysql
+3322/tcp  open   active-net
+3493/tcp  open   nut
+3878/tcp  open   fotogcad
+4125/tcp  open   rww
+5000/tcp  open   upnp
+5050/tcp  open   mmcc
+5060/tcp  open   sip
+5432/tcp  open   postgresql
+5633/tcp  open   beorl
+5902/tcp  open   vnc-2
+6000/tcp  open   X11
+6001/tcp  open   X11:1
+6510/tcp  open   mcer-port
+6667/tcp  open   irc
+6699/tcp  open   napster
+6789/tcp  open   ibm-db2-admin
+6969/tcp  open   acmsoda
+7000/tcp  open   afs3-fileserver
+7402/tcp  open   rtps-dd-mt
+7443/tcp  open   oracleas-https
+7937/tcp  open   nsrexecd
+8081/tcp  open   blackice-icecap
+8500/tcp  open   fmtp
+8600/tcp  open   asterix
+9103/tcp  open   jetdirect
+9418/tcp  open   git
+9898/tcp  open   monkeycom
+12000/tcp open   cce4x
+12345/tcp open   netbus
+15660/tcp open   bex-xr
+16000/tcp open   fmsas
+16001/tcp open   fmsascon
+27000/tcp open   flexlm0
+31337/tcp open   Elite
+32769/tcp open   filenet-rpc
+32771/tcp open   sometimes-rpc5
+32773/tcp open   sometimes-rpc9
+35500/tcp closed unknown
+44443/tcp open   coldfusion-auth
+62078/tcp open   iphone-sync
+
+Host script results:
+| dns-brute: 
+|   DNS Brute-force hostnames: 
+|     mx1.herosite.pro - 103.108.220.73
+|     mail.herosite.pro - 188.166.186.199
+|     www.herosite.pro - 188.166.186.199
+|     server.herosite.pro - 188.166.186.199
+|_    ftp.herosite.pro - 188.166.186.199
+
+# Nmap done at Sat Oct  8 00:52:29 2022 -- 1 IP address (1 host up) scanned in 4.92 seconds
