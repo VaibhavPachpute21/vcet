@@ -110,7 +110,7 @@ class App(customtkinter.CTk):
         
         self.entry = customtkinter.CTkEntry(master=self.frame_right,
                                             width=120,
-                                            placeholder_text="0.0.0.0")
+                                            placeholder_text="Enter Domain")
         self.entry.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
 
 
@@ -125,7 +125,7 @@ class App(customtkinter.CTk):
         
 
         self.button_5 = customtkinter.CTkButton(master=self.frame_right,
-                                                text="Enter IP ",
+                                                text="Scan",
                                                 border_width=2,  # <- custom border_width
                                                 fg_color=None,  # <- no fg_color
                                                 command=submit)

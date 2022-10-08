@@ -8,7 +8,9 @@ scanner = nmap.PortScanner()
 
 def printIp (domain) :
     nmapStr=[]
-    subDomainList=''
+    subDomainList=[]
+    limit=0
+    n=0
     ip_address = socket.gethostbyname(domain)
     sayIp = f'Domain Name:{domain}\nDomain IP:{ip_address}'
 
@@ -19,7 +21,9 @@ def printIp (domain) :
     with open(fName,'r') as f:
         for line in f:
             print("\t",line)
-            subDomainList=line
+            limit=limit+1
+            if limit<=5:
+                subDomainList.append(line)
             print(subDomainList)
 
 
@@ -29,7 +33,9 @@ def printIp (domain) :
     l=len(res['scan'][ip_address]['tcp']);
     for port in oports:
         print("\t",port, oports[port]['name'], oports[port]['state']);
-        nmapStr.append(str(port)+" "+str(oports[port]['name'])+" "+str(oports[port]['state']));
+        n=n+1
+        if n <=5:
+            nmapStr.append(str(port)+" "+str(oports[port]['name'])+" "+str(oports[port]['state']));
     # WHOIS
     w=whois.whois(domain)
     Registerar=str(w['registrar'])
@@ -40,4 +46,4 @@ def printIp (domain) :
     Emails=str(w['emails'])
     basicInfo=f'\nRegisterar:{Registerar}\nCreation Date:{Creation}\nExpiration Date:{Expiration}\nName Server:{Servers}\nCountry:{Country}\nEmails:{Emails}\nNmap:'
     
-    return sayIp+basicInfo+str(nmapStr)+"\n"+"SubDomains"+str(subDomainList)
+    return sayIp+basicInfo+str(nmapStr)+"\n"+"SubDomains:"+str(subDomainList)
