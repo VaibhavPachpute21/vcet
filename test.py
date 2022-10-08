@@ -12,22 +12,31 @@
 # 	{w['country']}
 # 	{w['emails']}
 # 	""")
-
-with open('output.txt') as f:
-    for line in f:
-        print("\t",line)
+# 
+# with open('output.txt') as f:
+#     for line in f:
+#         print("\t",line)
 
 # import subprocess
 # d="vcet.edu.in";
 
-command = "subfinder -d "+d+" -silent"
-print(command)
-subprocess.call(command, shell=True)
+# command = "subfinder -d "+d+" -silent"
+# print(command)
+# subprocess.call(command, shell=True)
 
-import os
+# import os
 
-for filename in os.listdir("vcet.ac.in"):
-   with open(os.path.join("vcet.ac.in", filename), 'r') as f:
-       text = f.read()
-       print(text)
+# for filename in os.listdir("vcet.ac.in"):
+#    with open(os.path.join("vcet.ac.in", filename), 'r') as f:
+#        text = f.read()
+#        print(text)
 
+import threading
+ 
+def gfg():
+    print("Computer Science: GeeksforGeeks\n")
+ 
+ 
+timer = threading.Timer(2.0, gfg)
+timer.start()
+print("Timer")
