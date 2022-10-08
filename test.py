@@ -13,16 +13,16 @@
 # 	{w['emails']}
 # 	""")
 
-# with open('output.txt') as f:
-#     for line in f:
-#         print("\t",line)
+with open('output.txt') as f:
+    for line in f:
+        print("\t",line)
 
 # import subprocess
 # d="vcet.edu.in";
 
-# command = "subfinder -d "+d+" -silent"
-# print(command)
-# subprocess.call(command, shell=True)
+command = "subfinder -d "+d+" -silent"
+print(command)
+subprocess.call(command, shell=True)
 
 import os
 
