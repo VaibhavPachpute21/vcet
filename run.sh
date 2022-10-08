@@ -11,7 +11,7 @@ python3 Scanner.py ${A}
 
 echo "Checking for Subdomains...."
 echo " "
-subfinder -d vcet.edu.in  -silent -o ./output/subfinder.txt 
+subfinder -d ${A}  -silent -o ./subfinder.txt 
 # subfinder -d ${A} -silent -a $A"_subfinder".txt &> /dev/null
 
 

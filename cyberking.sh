@@ -4,15 +4,7 @@
 
 
 echo "-----------------------------------------"
-echo "
-        ╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╭╮╭━┳╮
-        ╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱┃┃┃╭┫┃
-        ╭━━┳╮╱╭┫╰━┳━━┳━┫╰╯╯┃┣━╮╭━━╮
-        ┃╭━┫┃╱┃┃╭╮┃┃━┫╭┫╭╮┃╰┫╭╮┫╭╮┃
-        ┃╰━┫╰━╯┃╰╯┃┃━┫┃┃┃┃╰┳┫┃┃┃╰╯┃
-        ╰━━┻━╮╭┻━━┻━━┻╯╰╯╰━┻┻╯╰┻━╮┃
-        ╱╱╱╭━╯┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-        ╱╱╱╰━━╯╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ " 	
+figlet TuringScanner
 
 echo "------------------------------------------------"
 echo " ---* A Reconaissance and Vulnerability scanner Tool *---"
@@ -24,16 +16,15 @@ recon(){
 DOMAIN=""
 Wordlist=""
 read -p "Type Traget domain: " DOMAIN
-read -p "Wordlist (optional) : " Wordlist  
+# read -p "Wordlist (optional) : " Wordlist  
 
 echo "Your domain  ===   ${DOMAIN}"
 
  
  
-Dname=${DOMAIN%.*}
+Dname=${DOMAIN}
 
 echo "dname is ${Dname} "
-cd recon
 mkdir $Dname
 cd $Dname
 
@@ -46,9 +37,9 @@ echo "Whois is done "
 echo ""
 
 echo "Nmap is running ......"
-sudo  nmap -A $DOMAIN -Pn  | tee -a $Dname"_nmap.txt" &> /dev/null
+sudo  nmap -F $DOMAIN  | tee -a $Dname"_nmap.txt" &> /dev/null
 echo "nmap is done"
-x
+
 echo ""
 
 echo "Sublister is running....."
@@ -63,11 +54,6 @@ echo "subfinder is done"
 
 echo ""
 
-echo "httprobe is running....."
-cat $Dname'_subfinder'.txt  | sudo docker run -i bberastegui/httprobe | tee -a $Dname"_httprobe".txt &> /dev/null
-echo "httprobe is done"
-
-echo ""
 
 echo "Dirb is running ....."
 sudo dirb https://www.${DOMAIN} | tee -a $Dname"_dirb".txt &> /dev/null

@@ -1,0 +1,64 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-10-08 09:10 IST
+Nmap scan report for vcet.ac.in (103.102.234.44)
+Host is up (0.10s latency).
+Other addresses for vcet.ac.in (not scanned): 64:ff9b::6766:ea2c
+rDNS record for 103.102.234.44: divine.herosite.pro
+Not shown: 77 filtered ports
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+53/tcp   open   domain
+80/tcp   open   http
+110/tcp  open   pop3
+143/tcp  open   imap
+443/tcp  open   https
+465/tcp  open   smtps
+587/tcp  open   submission
+993/tcp  open   imaps
+995/tcp  open   pop3s
+1025/tcp open   NFS-or-IIS
+1026/tcp open   LSA-or-nterm
+1028/tcp open   unknown
+1720/tcp open   h323q931
+2000/tcp open   cisco-sccp
+3306/tcp open   mysql
+5000/tcp open   upnp
+5060/tcp open   sip
+5432/tcp open   postgresql
+6000/tcp open   X11
+6001/tcp open   X11:1
+8081/tcp open   blackice-icecap
+
+Nmap done: 1 IP address (1 host up) scanned in 5.49 seconds
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-10-08 09:46 IST
+Nmap scan report for vcet.ac.in (103.102.234.44)
+Host is up (0.11s latency).
+Other addresses for vcet.ac.in (not scanned): 64:ff9b::6766:ea2c
+rDNS record for 103.102.234.44: divine.herosite.pro
+Not shown: 77 filtered ports
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+53/tcp   open   domain
+80/tcp   open   http
+110/tcp  open   pop3
+143/tcp  open   imap
+443/tcp  open   https
+465/tcp  open   smtps
+587/tcp  open   submission
+993/tcp  open   imaps
+995/tcp  open   pop3s
+1025/tcp open   NFS-or-IIS
+1026/tcp open   LSA-or-nterm
+1028/tcp open   unknown
+1720/tcp open   h323q931
+2000/tcp open   cisco-sccp
+3306/tcp open   mysql
+5000/tcp open   upnp
+5060/tcp open   sip
+5432/tcp open   postgresql
+6000/tcp open   X11
+6001/tcp open   X11:1
+8081/tcp open   blackice-icecap
+
+Nmap done: 1 IP address (1 host up) scanned in 3.40 seconds
